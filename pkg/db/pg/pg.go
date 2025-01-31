@@ -10,8 +10,8 @@ import (
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"platform_common/pkg/db"
-	"platform_common/pkg/db/prettier"
+	"github.com/dbulyk/platform_common/pkg/db"
+	"github.com/dbulyk/platform_common/pkg/db/prettier"
 )
 
 type key string
