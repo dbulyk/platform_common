@@ -1,0 +1,13 @@
+LOCAL_BIN:=$(CURDIR)/bin
+
+install-golangci-lint:
+	GOBIN=$(LOCAL_BIN) go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.61.0
+
+lint:
+	$(LOCAL_BIN)/golangci-lint run ./... --config .github/workflows/linter_config.yaml
+
+gci-imports:
+	$(LOCAL_BIN)/gci write . --skip-generated -s standard -s localmodule -s default
+
+install-deps:
+	GOBIN=$(LOCAL_BIN) go install github.com/daixiang0/gci@v0.13.5
