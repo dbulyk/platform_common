@@ -1,4 +1,4 @@
-module platform_common
+module github.com/dbulyk/platform_common
 
 go 1.23
 
